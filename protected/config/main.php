@@ -79,6 +79,9 @@ return array(
 				*/
 			),
 		),
+		'autoloadFunction'=>array(
+			'class'=>'application.components.AutoloadFunction'
+		)
 	),
 
 	// application-level parameters that can be accessed

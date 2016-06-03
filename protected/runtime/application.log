@@ -20,3 +20,329 @@ Stack trace:
 REQUEST_URI=/Allahuakbar/tikea/index.php?r=gii/model/index
 HTTP_REFERER=http://localhost/Allahuakbar/tikea/index.php?r=gii/default/index
 ---
+2016/06/03 21:34:00 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:01 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:02 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:02 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:02 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:02 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:02 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in /var/www/Allahuakbar/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /var/www/Allahuakbar/tikea/protected/controllers/SiteController.php(9): CController->render('index')
+#2 /var/www/Allahuakbar/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#3 /var/www/Allahuakbar/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Allahuakbar/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Allahuakbar/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Allahuakbar/framework/web/CWebApplication.php(282): CController->run('')
+#7 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 21:34:47 [error] [php] Missing argument 1 for CController::__construct(), called in /var/www/Allahuakbar/tikea/protected/components/Controller.php on line 9 and defined (/var/www/Allahuakbar/framework/web/CController.php:110)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 21:34:48 [error] [php] Missing argument 1 for CController::__construct(), called in /var/www/Allahuakbar/tikea/protected/components/Controller.php on line 9 and defined (/var/www/Allahuakbar/framework/web/CController.php:110)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 21:34:48 [error] [php] Missing argument 1 for CController::__construct(), called in /var/www/Allahuakbar/tikea/protected/components/Controller.php on line 9 and defined (/var/www/Allahuakbar/framework/web/CController.php:110)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 21:34:48 [error] [php] Missing argument 1 for CController::__construct(), called in /var/www/Allahuakbar/tikea/protected/components/Controller.php on line 9 and defined (/var/www/Allahuakbar/framework/web/CController.php:110)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 21:34:48 [error] [php] Missing argument 1 for CController::__construct(), called in /var/www/Allahuakbar/tikea/protected/components/Controller.php on line 9 and defined (/var/www/Allahuakbar/framework/web/CController.php:110)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(276): CWebApplication->createController()
+#1 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 21:40:33 [error] [exception.CException] exception 'CException' with message 'Alias "ext.components.AutoloadFunction" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /var/www/Allahuakbar/framework/YiiBase.php:322
+Stack trace:
+#0 /var/www/Allahuakbar/framework/YiiBase.php(196): YiiBase::import('ext.components....', true)
+#1 /var/www/Allahuakbar/framework/base/CModule.php(386): YiiBase::createComponent(Array)
+#2 /var/www/Allahuakbar/framework/base/CModule.php(103): CModule->getComponent('autoloadFunctio...')
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): CModule->__get('autoloadFunctio...')
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): Controller->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/Allahuakbar/tikea/
+---
+2016/06/03 22:15:32 [error] [php] Object of class EHttpClient could not be converted to string (/var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php:15)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (15)
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 22:17:06 [error] [php] include(EHttpClientAdapterSocket.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(16): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (16)
+2016/06/03 22:17:40 [error] [php] include(EHttpClientAdapterSocket.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(16): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (16)
+2016/06/03 22:18:48 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:19:16 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:19:16 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:19:17 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:19:17 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:19:17 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:43:47 [error] [php] include(EHttpClientAdapterCurl.php): failed to open stream: No such file or directory (/var/www/Allahuakbar/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(741): spl_autoload_call()
+#1 /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php(774): EHttpClient->setAdapter()
+#2 /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php(17): EHttpClient->request()
+#3 /var/www/Allahuakbar/tikea/protected/components/Controller.php(9): AutoloadFunction->constructToken()
+#4 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#5 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (741)
+in /var/www/Allahuakbar/tikea/protected/vendor/httpclient/EHttpClient.php (774)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (17)
+2016/06/03 22:46:11 [error] [php] require_once(application.vendor.httpclient.adapter.*): failed to open stream: No such file or directory (/var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php:8)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(281): SiteController->init()
+#1 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#2 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#3 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (8)
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (8)
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+2016/06/03 22:56:02 [error] [php] Trying to get property of non-object (/var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php:20)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (20)
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
+2016/06/03 22:56:23 [error] [php] Trying to get property of non-object (/var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php:21)
+Stack trace:
+#0 /var/www/Allahuakbar/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#1 /var/www/Allahuakbar/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/Allahuakbar/tikea/index.php(13): CWebApplication->run()
+REQUEST_URI=/Allahuakbar/tikea/
+in /var/www/Allahuakbar/tikea/protected/components/AutoloadFunction.php (21)
+in /var/www/Allahuakbar/tikea/protected/components/Controller.php (9)
+in /var/www/Allahuakbar/tikea/index.php (13)
