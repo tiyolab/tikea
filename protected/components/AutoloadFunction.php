@@ -1,6 +1,7 @@
 <?php
 
 class AutoloadFunction extends CApplicationComponent{
+	
 	public function constructToken(){
 		if(!isset(Yii::app()->session['token']) || empty(Yii::app()->session['token'])){
 			Yii::import('application.vendor.httpclient.*');	

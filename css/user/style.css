@@ -808,10 +808,10 @@ li.button a:hover{
 li.button a span{
 	margin-right: 22px;
 }
-.dropdown{
+/*.dropdown{
 	display:none;
 	padding: 0;
-}
+}*/
 .dropdown li a{
 	border-left: 6px solid #1a2c4d;
 	display: block;
