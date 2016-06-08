@@ -18,12 +18,14 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 <!-- js -->
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/user/jquery.min.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/user/bootstrap.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/user/jquery.dataTables.min.js"></script>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/user/modernizr.custom.js"></script>
 <!-- /js -->
 
 <!-- /Custom Theme files -->
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/user/bootstrap.min.css" type="text/css" rel="stylesheet" media="all">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/user/jquery-ui.css" type="text/css" rel="stylesheet" media="all">
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/user/jquery.dataTables.css" type="text/css" rel="stylesheet" media="all">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/user/style.css" type="text/css" rel="stylesheet" media="all">
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/user/JFFormStyle-1.css" type="text/css" rel="stylesheet"/>
 
@@ -56,6 +58,11 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 <!--pop-up-->
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/user/menu_jquery.js"></script>
 <!--/pop-up-->
+
+<!-- my yii style -->
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/user/yii_style.css" rel="stylesheet">
+<!-- my yii style - END -->
+
 </head>
 <body>
 	<!--header-->
@@ -118,10 +125,10 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/images/user/menu.png" alt="" />
 					</span>
 					<ul class="nav1">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="hotels.html">Hotel</a></li>
-						<li><a href="holidays.html">Tiket Pesawat</a></li>
-						<li><a href="flights-hotels.html">Tiket Kereta Api</a></li>
+						<li class="<?php /*echo ($page_id == 'home') ? "active" : "";*/ ?>"><a href="<?php echo CHtml::normalizeUrl(array('home/index')); ?>">Home</a></li>
+						<li class="<?php /*echo ($page_id == 'hotel') ? "active" : "";*/ ?>"><a href="hotels.html">Hotel</a></li>
+						<li><a href="<?php echo CHtml::normalizeUrl(array('flight/index')); ?>">Tiket Pesawat</a></li>
+						<li><a href="<?php echo CHtml::normalizeUrl(array('train/index')); ?>">Tiket Kereta Api</a></li>
 						<li><a href="flights-hotels.html">Tiket Konser</a></li>
 						<li><a href="flights-hotels.html">Kerja Sama</a></li>
 					</ul>
@@ -286,7 +293,9 @@ License URL: http:/creativecommons.org/licenses/by/3.0/
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/user/responsive-slider.js"></script>
     <script type="text/javascript">
     	$(document).ready(function() {
-			$('.xxx').datepicker();
+			$('.xxx').datepicker({
+				format : 'yyyy-mm-dd'
+			});
 			
 		});
     </script>

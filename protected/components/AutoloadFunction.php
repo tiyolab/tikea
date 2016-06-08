@@ -20,7 +20,7 @@ class AutoloadFunction extends CApplicationComponent{
 				$data = json_decode($response->getBody());
 				Yii::app()->session['token'] = $data->token;
 			}else{
-				$response->getRawBody();
+				return null;
 			}
 		}
 	}

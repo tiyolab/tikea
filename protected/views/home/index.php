@@ -63,17 +63,18 @@
 	    <a class="page" href="#" data-jump-to="3">3</a>
 	  </div>
 	</div>
+    <!-- Responsive slider - END -->
 	<main class="custom_tab">
-		<input class="custom_tab" id="tab1" type="radio" name="tabs" checked>
+		<input class="custom_tab" id="tab1" type="radio" name="tabs" <?php echo ($active_tab == 0) ? "checked" : ""; ?> >
 		<label class="custom_tab" for="tab1">Hotel</label>
 		    
-		<input class="custom_tab" id="tab2" type="radio" name="tabs">
+		<input class="custom_tab" id="tab2" type="radio" name="tabs" <?php echo ($active_tab == 1) ? "checked" : ""; ?>>
 		<label class="custom_tab" for="tab2">Tiket Pesawat</label>
 		    
-		<input class="custom_tab" id="tab3" type="radio" name="tabs">
+		<input class="custom_tab" id="tab3" type="radio" name="tabs" <?php echo ($active_tab == 2) ? "checked" : ""; ?>>
 		<label class="custom_tab" for="tab3">Tiket Kereta Api</label>
 		    
-		<input class="custom_tab" id="tab4" type="radio" name="tabs">
+		<input class="custom_tab" id="tab4" type="radio" name="tabs" <?php echo ($active_tab == 3) ? "checked" : ""; ?>>
 		<label class="custom_tab" for="tab4">Tiket</label>
 		    
 		<section class="custom_tab" id="content1">
@@ -151,14 +152,96 @@
 
 		<section class="custom_tab" id="content2">
 			<div class="tab-pane fade active in" id="flights-tab">
-                            <form action="flight-list-view.html" method="post">
+                            <?php 
+
+                                $form=$this->beginWidget('CActiveForm', array(
+                                    'action'=>CHtml::normalizeUrl(array('home/searchFlight')),
+                                    /*'method'=>'GET'*/
+                                )); 
+                                echo $form->errorSummary($flightModel);
+                            ?>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <h4 class="title">Where</h4>
                                         <div class="form-group">
-                                            <label>Leaving From</label>
+                                            <?php echo $form->labelEx($flightModel,'departure'); ?>
                                             <div class="dropdown">
-                                                <input class="input-text full-width dropdown-toggle" placeholder="city, distirct or specific airpot" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <input name = "s_d" id="depart_airport" type="text" class="input-text full-width dropdown-toggle" placeholder="Bandara keberangkatan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <?php 
+                                                /*echo $form->textField($flightModel,null,array(
+                                                    "id"=>"depart_airport",
+                                                    "class"=>"input-text full-width dropdown-toggle",
+                                                    "placeholder"=>"Bandara keberangkatan",
+                                                    "data-toggle"=>"dropdown",
+                                                    "aria-haspopup"=>"true",
+                                                    "aria-expanded"=>"true"
+                                                ));*/
+
+                                                echo $form->hiddenField($flightModel, 'departure', array(
+                                                    "id"=>"depart_airport_code"
+                                                ));
+                                                ?>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="height:400px;overflow:auto">
+                                                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                                                                    <div class="un_used">
+                                                                        <div class="un_used">
+                                                    <?php
+                                                        if($airport != null){
+                                                            $tmp_country_id = "";
+                                                            for($i = 0; $i < count($airport); $i++){
+                                                                if($airport[$i]->country_id != $tmp_country_id){
+                                                                    $tmp_country_id = $airport[$i]->country_id;
+                                                                    ?>
+                                                                            </div> 
+                                                                        </div>
+                                                                        <div class="panel panel-default">
+                                                                            <div class="panel-heading" role="tab" id="heading_<?=$i?>">
+                                                                              <h4 class="panel-title">
+                                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_<?=$i?>" aria-expanded="false" aria-controls="collapse_<?=$i?>">
+                                                                                  <?=$airport[$i]->country_name?>
+                                                                                </a>
+                                                                              </h4>
+                                                                            </div>
+                                                                            <div id="collapse_<?=$i?>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_<?=$i?>">
+                                                                                <ul>
+                                                                    <?php
+                                                                }
+                                                                ?>
+                                                                    <li>
+                                                                        <a class = "airport_location" datafor="depart_airport" airportcode="<?=$airport[$i]->airport_code?>">
+                                                                            <?=$airport[$i]->location_name?> (<?=$airport[$i]->airport_code?>), <?=$airport[$i]->airport_name?>
+                                                                        </a>
+                                                                    </li>
+                                                                <?php
+                                                            }
+                                                        }
+                                                    ?>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label>Going To</label> -->
+                                            <?php echo $form->labelEx($flightModel,'arrival'); ?>
+                                            <div class="dropdown">
+                                                <input name = "s_a" id="arrival_airport" class="input-text full-width dropdown-toggle" placeholder="Bandara tujuan" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <?php 
+                                                /*echo $form->textField($flightModel,'',array(
+                                                    "id"=>"arrival_airport",
+                                                    "class"=>"input-text full-width dropdown-toggle",
+                                                    "placeholder"=>"Bandara tujuan",
+                                                    "data-toggle"=>"dropdown",
+                                                    "aria-haspopup"=>"true",
+                                                    "aria-expanded"=>"true"
+                                                ));*/ 
+
+                                                echo $form->hiddenField($flightModel, 'arrival', array(
+                                                    "id"=>"arrival_airport_code"
+                                                ));
+                                                ?>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="height:400px;overflow:auto">
                                                     <div id="accordion" role="tablist" aria-multiselectable="true">
                                                                     <div class="un_used">
@@ -188,53 +271,9 @@
                                                                 }
                                                                 ?>
                                                                     <li>
-                                                                        <a href=""><?=$airport[$i]->location_name?> (<?=$airport[$i]->airport_code?>), <?=$airport[$i]->airport_name?></a>
-                                                                    </li>
-                                                                <?php
-                                                            }
-                                                        }
-                                                    ?>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Going To</label>
-                                            <div class="dropdown">
-                                                <input class="input-text full-width dropdown-toggle" placeholder="city, distirct or specific airpot" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="height:400px;overflow:auto">
-                                                    <div id="accordion" role="tablist" aria-multiselectable="true">
-                                                                    <div class="un_used">
-                                                                        <div class="un_used">
-                                                    <?php
-                                                        if($airport != null){
-                                                            $tmp_country_id = "";
-                                                            for($i = 0; $i < count($airport); $i++){
-                                                                if($airport[$i]->country_id != $tmp_country_id){
-                                                                    $tmp_country_id = $airport[$i]->country_id;
-                                                                    ?>
-                                                                            </div> 
-                                                                        </div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading" role="tab" id="heading_<?=$i?>">
-                                                                              <h4 class="panel-title">
-                                                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse_<?=$i?>" aria-expanded="false" aria-controls="collapse_<?=$i?>">
-                                                                                  <?=$airport[$i]->country_name?>
-                                                                                </a>
-                                                                              </h4>
-                                                                            </div>
-                                                                            <div id="collapse_<?=$i?>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_<?=$i?>">
-                                                                                <!-- content -->
-                                                                                <ul>
-                                                                            
-                                                                    <?php
-                                                                }
-                                                                ?>
-                                                                    <li>
-                                                                        <a href=""><?=$airport[$i]->location_name?> (<?=$airport[$i]->airport_code?>), <?=$airport[$i]->airport_name?></a>
+                                                                        <a class = "airport_location" datafor="arrival_airport" airportcode="<?=$airport[$i]->airport_code?>">
+                                                                            <?=$airport[$i]->location_name?> (<?=$airport[$i]->airport_code?>), <?=$airport[$i]->airport_name?>
+                                                                        </a>
                                                                     </li>
                                                                 <?php
                                                             }
@@ -249,104 +288,243 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="col-md-4">
-                                        <h4 class="title">When</h4>
-                                        <label>Departing On</label>
+                                    <div class="col-md-2">
+                                        <!-- <label>Departing On</label> -->
                                         <div class="form-group row">
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-12">
+                                                <?php echo $form->labelEx($flightModel,'departDate'); ?>
                                                 <div class="input-group input-append date">
-									                <input type="text" class="form-control xxx" name="date" />
+									                <!-- <input type="text" class="form-control xxx" name="date" /> -->
+                                                    <?php echo $form->textField($flightModel,'departDate',array(
+                                                        "class"=>"form-control xxx"
+                                                    )); ?>
 									                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
 									            </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">anytime</option>
-                                                        <option value="2">morning</option>
-                                                    </select>
-                                                </div>
                                             </div>
                                         </div>
-                                        <label>Arriving On</label>
+                                    </div>
+
+                                    <div class="col-md-1">
                                         <div class="form-group row">
-                                            <div class="col-xs-6">
-                                                <div class="input-group input-append date">
-									                <input type="text" class="form-control xxx" name="date" />
-									                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-									            </div>
-                                            </div>
-                                            <div class="col-xs-6">
+                                            <div class="col-xs-12">
+                                                <?php echo $form->labelEx($flightModel,'adult'); ?>
                                                 <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">anytime</option>
-                                                        <option value="2">morning</option>
-                                                    </select>
+                                                    <?php echo $form->dropDownList($flightModel, 'adult', [
+                                                        1 => "1",
+                                                        2 => "2",
+                                                        3 => "3",
+                                                        4 => "4",
+                                                    ], ["class"=>"full-width form-control"]); ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <?php echo $form->labelEx($flightModel,'kids'); ?>
+                                                <div class="selector">
+                                                    <?php echo $form->dropDownList($flightModel, 'kids', [
+                                                        0 => "0",
+                                                        1 => "1",
+                                                        2 => "2",
+                                                        3 => "3",
+                                                        4 => "4",
+                                                    ], ["class"=>"full-width form-control"]); ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <?php echo $form->labelEx($flightModel,'infants'); ?>
+                                                <div class="selector">
+                                                    <?php echo $form->dropDownList($flightModel, 'infants', [
+                                                        0 => "0",
+                                                        1 => "1",
+                                                        2 => "2",
+                                                        3 => "3",
+                                                        4 => "4",
+                                                    ], ["class"=>"full-width form-control"]); ?>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     
-                                    <div class="col-md-4">
-                                        <h4 class="title">Who</h4>
+                                    <div class="col-md-3">
                                         <div class="form-group row">
-                                            <div class="col-xs-3">
-                                                <label>Adults</label>
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">01</option>
-                                                        <option value="2">02</option>
-                                                        <option value="3">03</option>
-                                                        <option value="4">04</option>
-                                                    </select>
-                                                </div>
+                                            <?php if(CCaptcha::checkRequirements()): ?>
+                                            <div class="col-xs-12">
+                                                <?php echo $form->labelEx($flightModel,'verifyCode'); ?>
+                                                <?php $this->widget('CCaptcha'); ?>
+                                                <?php echo $form->textField($flightModel,'verifyCode', [
+                                                    "class"=>"input-text full-width",
+                                                    "placeholder"=>"Kode verifikasi",
+                                                ]); ?>
                                             </div>
-                                            <div class="col-xs-3">
-                                                <label>Kids</label>
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">01</option>
-                                                        <option value="2">02</option>
-                                                        <option value="3">03</option>
-                                                        <option value="4">04</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <label>Promo Code</label>
-                                                <input class="input-text full-width" placeholder="type here" type="text">
-                                            </div>
+                                            <?php endif; ?>
                                         </div>
                                         <div class="form-group row">
-                                            <div class="col-xs-3">
-                                                <label>Infants</label>
-                                                <div class="selector">
-                                                    <select class="full-width">
-                                                        <option value="1">01</option>
-                                                        <option value="2">02</option>
-                                                        <option value="3">03</option>
-                                                        <option value="4">04</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6 pull-right">
-                                                <label>&nbsp;</label>
-                                                <button class="full-width icon-check">SERACH NOW</button>
+                                            <div class="col-xs-12 pull-right">
+                                                <button class="full-width icon-check">CARI SEKARANG</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            <!-- </form> -->
+                            <?php $this->endWidget(); ?>
                         </div>
 		</section>   
 
 		<section class="custom_tab" id="content3">
+            <div class="tab-pane fade active in" id="trains-tab">
+                            <?php 
+
+                                $form_train=$this->beginWidget('CActiveForm', array(
+                                    'action'=>CHtml::normalizeUrl(array('home/searchTrain')),
+                                    /*'method'=>'GET'*/
+                                )); 
+                                echo $form_train->errorSummary($trainModel);
+                            ?>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <?php echo $form_train->labelEx($trainModel,'departure'); ?>
+                                            <div class="dropdown">
+
+                                                <?php echo $form_train->textField($trainModel,'departure',array(
+                                                    "id"=>"depart_train",
+                                                    "train_station_code"=>"",
+                                                    "class"=>"input-text full-width dropdown-toggle",
+                                                    "placeholder"=>"Stasiun keberangkatan",
+                                                    "data-toggle"=>"dropdown",
+                                                    "aria-haspopup"=>"true",
+                                                    "ariaaria-expanded"=>"true",
+                                                )); ?>
+
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="height:400px;overflow:auto">
+                                                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                                                                    <div class="un_used">
+                                                                        <div class="un_used">
+                                                                        </div>
+                                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <label>Going To</label> -->
+                                            <?php echo $form_train->labelEx($trainModel,'arrival'); ?>
+                                            <div class="dropdown">
+                                                <!-- <input id="arrival_airport" airportcode="" class="input-text full-width dropdown-toggle" placeholder="city, distirct or specific airpot" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> -->
+                                                <?php echo $form_train->textField($trainModel,'arrival',array(
+                                                    "id"=>"arrival_train",
+                                                    "train_station_code"=>"",
+                                                    "class"=>"input-text full-width dropdown-toggle",
+                                                    "placeholder"=>"Stasiun tujuan",
+                                                    "data-toggle"=>"dropdown",
+                                                    "aria-haspopup"=>"true",
+                                                    "ariaaria-expanded"=>"true",
+                                                )); ?>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1" style="height:400px;overflow:auto">
+                                                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                                                                    <div class="un_used">
+                                                                        <div class="un_used">        
+                                                                        </div>
+                                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-2">
+                                        <div class="form-group row">
+                                            <div class="col-xs-12">
+                                                <?php echo $form_train->labelEx($trainModel,'departDate'); ?>
+                                                <div class="input-group input-append date">
+                                                    <!-- <input type="text" class="form-control xxx" name="date" /> -->
+                                                    <?php echo $form_train->textField($trainModel,'departDate',array(
+                                                        "class"=>"form-control xxx"
+                                                    )); ?>
+                                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-1">
+                                        <div class="form-group row">
+                                            <div class="col-xs-12">
+                                                <?php echo $form_train->labelEx($trainModel,'adult'); ?>
+                                                <div class="selector">
+                                                    <?php echo $form_train->dropDownList($trainModel, 'adult', [
+                                                        1 => "1",
+                                                        2 => "2",
+                                                        3 => "3",
+                                                        4 => "4",
+                                                    ], ["class"=>"full-width form-control"]); ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <?php echo $form_train->labelEx($trainModel,'kids'); ?>
+                                                <div class="selector">
+                                                    <?php echo $form_train->dropDownList($trainModel, 'kids', [
+                                                        0 => "0",
+                                                        1 => "1",
+                                                        2 => "2",
+                                                        3 => "3",
+                                                        4 => "4",
+                                                    ], ["class"=>"full-width form-control"]); ?>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <?php echo $form_train->labelEx($trainModel,'infants'); ?>
+                                                <div class="selector">
+                                                    <?php echo $form_train->dropDownList($trainModel, 'infants', [
+                                                        0 => "0",
+                                                        1 => "1",
+                                                        2 => "2",
+                                                        3 => "3",
+                                                        4 => "4",
+                                                    ], ["class"=>"full-width form-control"]); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group row">
+                                            <div class="col-xs-12">
+                                                <?php echo $form_train->labelEx($trainModel,'class'); ?>
+                                                <?php
+                                                    echo $form_train->radioButtonList($trainModel, 'class', $train_class, array());
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-3">
+                                        <div class="form-group row">
+                                            <?php if(CCaptcha::checkRequirements()): ?>
+                                            <div class="col-xs-12">
+                                                <?php echo $form_train->labelEx($trainModel,'verifyCode'); ?>
+                                                <?php $this->widget('CCaptcha'); ?>
+                                                <?php echo $form_train->textField($trainModel,'verifyCode', [
+                                                    "class"=>"input-text full-width",
+                                                    "placeholder"=>"Kode verifikasi",
+                                                ]); ?>
+                                            </div>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 pull-right">
+                                                <button class="full-width icon-check">CARI SEKARANG</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </form> -->
+                            <?php $this->endWidget(); ?>
+                        </div>
 		</section>    
 
 		<section class="custom_tab" id="content4">
 		</section>  
 	</main>
-	<!-- Responsive slider - END -->
 	<!-- banner-bottom -->
 	<div class="banner-bottom">
 		<!-- container -->
@@ -595,7 +773,8 @@
 		</div>
 		<!-- /container -->
 	</div>
-	<!-- /banner-bottom -->
+	<!-- /banner-bottom - END -->
+
 	<!-- popular-grids -->
 	<div class="popular-grids">
 		<!-- container -->
@@ -657,4 +836,19 @@
 		</div>
 		<!-- /container -->
 	</div>
-	<!-- popular-grids
+	<!-- popular-grids - END -->
+
+    <!-- script to handle selected airport -->
+    <script>
+        $(document).ready(function(){
+            $(".airport_location").on('click', function(){
+                dataFor = $(this).attr('datafor');
+                airportCode = $(this).attr('airportcode');
+                name = $(this).text().trim();
+
+                $("#"+dataFor).val(name);
+                $("#"+dataFor+"_code").val(airportCode);
+            });
+        });
+    </script>
+    <!-- script to handle selected airport - END -->
